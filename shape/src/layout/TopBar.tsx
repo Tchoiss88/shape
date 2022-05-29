@@ -4,7 +4,11 @@ import { useState, useEffect } from 'react';
 import { CgProfile } from 'react-icons/cg';
 import { MdBrightness5, MdBrightness7 } from 'react-icons/md';
 
-const TopBar = () => {
+interface TopBarProps {
+
+}
+
+const TopBar: React.FC<TopBarProps> = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   useEffect(() => setMounted(true), []);

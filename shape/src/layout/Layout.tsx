@@ -1,12 +1,13 @@
-import { NextPage } from 'next';
+import React from 'react';
+
 import TopBar from './TopBar';
 import Footer from './Footer';
 
-const Layout: NextPage = (props) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <TopBar />
-      {props.children}
+      <main>{children}</main>
       <Footer />
     </>
   );
