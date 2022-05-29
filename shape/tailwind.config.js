@@ -4,9 +4,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    fontFamily: {},
-    
+  theme: {       
     extend: {
       colors: {
         'app_white': '#fff',
