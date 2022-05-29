@@ -1,9 +1,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
 
 const Home: NextPage = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   return (
     <div>
       <Head>
@@ -12,8 +17,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className="text-3xl font-bold underline">Hello Shape!</h1>
+      <main className="w-full h-screen flex flex-col justify-center items-center dark:bg-app_black text-app_gray dark:text-app_light_gray">
+        <div className=" md:container md:xl md:mt-16 flex flex-col justify-center items-center bg-app_light_blue dark:bg-app_dark_gray h-screen">
+          <h1 className="text-4xl font-bold py-6">
+            Hello Shape! The best app ever<br></br> current theme mode: {theme}
+          </h1>
+        </div>
       </main>
     </div>
   );
