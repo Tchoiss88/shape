@@ -97,7 +97,7 @@ const TopBar: React.FC<TopBarProps> = () => {
 
           <div className="px-2">
             <a
-              href="#"
+              href="/about"
               className="flex flex-row font-extrabold justify-center  items-center"
             >
               <span className="text-4xl md:text-2xl px-2  ">
